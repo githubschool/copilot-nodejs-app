@@ -1,0 +1,24 @@
+<!-- Include the header.ejs file -->
+<%- include('header', { title: 'Welcome to MyApp' }) %>
+
+<div class="row">
+    <div class="col-md-4">
+        <h4><a href="/addCollaborator">Add a Collaborator</a></h4>
+        <p>Update your collaborators in your repository.</p>
+    </div>
+    <div class="col-md-4">
+        <h4><a href="/viewRepository">View Repositories</a></h4>
+        <p>View all repositories in a specific organization.</p>
+    </div>
+    <div class="col-md-4">
+        <h4><a href="/removeCollaborator">Remove a Collaborator</a></h4>
+        <p>Remove collaborators from your repository.</p>
+    </div>
+    <div class="col-md-4">
+        <h4><a href="/viewAllRequests">View Requests</a></h4>
+        <p>View all requests.</p>
+    </div>
+</div>
+
+<!-- Include the footer.ejs file -->
+<%- include('footer') %>

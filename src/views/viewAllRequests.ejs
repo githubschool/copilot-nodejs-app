@@ -1,0 +1,35 @@
+<!-- Include the header.ejs file -->
+<%- include('header', { title: 'View All Requests' }) %>
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Collaborator Requests</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Owner</th>
+                    <th>Repository</th>
+                    <th>Username</th>
+                    <th>Permissions</th>
+                    <th>Action</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% requests.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp)).forEach(request => { %>
+                    <tr>
+                        <td><%= request.owner || request.org %></td>
+                        <td><%= request.repo %></td>
+                        <td><%= request.username %></td>
+                        <td><%= request.permissions %></td>
+                        <td><%= request.action %></td>
+                        <td><%= new Date(request.timestamp).toLocaleString() %></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Include the footer.ejs file -->
+<%- include('footer') %>
