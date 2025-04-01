@@ -1,0 +1,25 @@
+{
+  "name": "nodejs-webapp-simple",
+  "version": "1.0.0",
+  "description": "add in repos and users",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "vfm2",
+  "license": "ISC",
+  "dependencies": {
+    "@octokit/rest": "^21.0.1",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.0",
+    "mongodb": "^6.15.0",
+    "morgan": "^1.10.0"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@playwright/test": "^1.51.1",
+    "@types/node": "^22.13.13",
+    "playwright": "^1.51.1"
+  }
+}
